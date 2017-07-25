@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First angular app</title>
+    
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    
+</head>
+
+<body ng-app="ng-firstapp" ng-controller="firstappController">
+    <div class="well" ng-repeat="crib in cribs">
+        <h3>{{ crib.address }}</h3>
+        <p><strong>Type: </strong>{{ crib.type }}</p>
+        <p><strong>Description: </strong>{{ crib.description }}</p>
+        <p><strong>Price: </strong>{{ crib.price | currency }}</p>
+    </div>
+    <!-- <pre>{{ cribs | json }}</pre> -->
+    
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
+    <!-- angular UI bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js
+                 "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    
+    <!-- custom script -->
+    <script src="app.js"></script>
+    <script src="scripts/firstappController.js"></script>
+    <script src="scripts/firstappFactory.js"></script>
+</body>
+</html>
